@@ -40,5 +40,5 @@
 `plus.py` スクリプトを実行して、数値処理を行います。以下のコマンドでスクリプトを実行できます。
 
 ```bash
-python3 plus.py
+python3 kanji_number_sequence.py
 

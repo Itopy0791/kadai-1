@@ -1,4 +1,4 @@
-# 
+# kanji_converter.py
 
 readme_content = """
 # 数字から漢数字への変換
@@ -29,6 +29,7 @@ git clone https://github.com/Itopy0791/kadai-1.git
 # プロジェクトのディレクトリに移動
 cd kadai-1
 
-## 使いかた
-'''python kanji_converter.py'''
+
+## 使い方
+``` python kanji_converter.py ```
 

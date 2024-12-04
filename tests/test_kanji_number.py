@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from io import StringIO
 from contextlib import redirect_stdout
 from kanji_number_sequence import special_number_sequence

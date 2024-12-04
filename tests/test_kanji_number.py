@@ -1,4 +1,9 @@
-expected_output = """1
+from io import StringIO
+from contextlib import redirect_stdout
+from kanji_number_sequence import special_number_sequence
+
+def test_special_number_sequence():
+    expected_output = """1
 2
 三
 4
@@ -36,6 +41,18 @@ expected_output = """1
 三十六
 三十七
 三十八
-三十九
-"""
+三十九"""
+
+    captured_output = StringIO()
+    with redirect_stdout(captured_output):
+        special_number_sequence()
+
+    print("Captured Output:")
+    print(captured_output.getvalue())
+
+    print("Expected Output:")
+    print(expected_output)
+
+
+    assert captured_output.getvalue().strip() == expected_output.strip()
 

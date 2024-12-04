@@ -1,17 +1,22 @@
-kanji_numbers = {
-    3: '三', 6: '六', 9: '九', 12: '十二', 13: '十三', 15: '十五',
-    18: '十八', 21: '二十一', 23: '二十三', 24: '二十四',
-    27: '二十七', 30: '三十', 31: '三十一', 32: '三十二', 33: '三十三',
-    34: '三十四', 35: '三十五', 36: '三十六', 37: '三十七', 38: '三十八', 39: '三十九'
-}
-
 def special_number_sequence():
-    for i in range(1, 41):
-        if i % 3 == 0 or '3' in str(i):
-            print(kanji_numbers.get(i, i))
+    for i in range(1, 40):
+        if i % 3 == 0:
+            # 3の倍数を漢数字にする
+            print(to_kanji(i))
+        elif i >= 10:
+            # 10以上の数字を漢数字に変換
+            print(to_kanji(i))
         else:
+            # その他の数字はそのまま出力
             print(i)
 
-if __name__ == "__main__":
-    special_number_sequence()
-
+def to_kanji(num):
+    kanji_map = {1: "一", 2: "二", 3: "三", 4: "四", 5: "五", 6: "六", 7: "七", 8: "八", 9: "九", 10: "十"}
+    if num < 10:
+        return kanji_map[num]
+    elif num < 20:
+        return "十" + kanji_map[num % 10] if num % 10 != 0 else "十"
+    else:
+        tens = kanji_map[num // 10]
+        ones = kanji_map[num % 10] if num % 10 != 0 else ""
+        return tens + "十" + ones

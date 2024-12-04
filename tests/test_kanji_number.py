@@ -25,16 +25,16 @@ def test_special_number_sequence():
 17
 十八
 19
-二十
+20
 二十一
-二十二
+22
 二十三
 二十四
-二十五
-二十六
+25
+26
 二十七
-二十八
-二十九
+28
+29
 三十
 三十一
 三十二
@@ -44,7 +44,8 @@ def test_special_number_sequence():
 三十六
 三十七
 三十八
-三十九"""
+三十九
+40"""
 
     captured_output = StringIO()
     with redirect_stdout(captured_output):

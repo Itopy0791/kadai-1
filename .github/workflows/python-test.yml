@@ -1,4 +1,6 @@
 name: Python testing
+- name: Set PYTHONPATH
+  run: export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 on: [push]
 

@@ -31,5 +31,5 @@ cd kadai-1
 
 
 ## 使い方
-``` python kanji_converter.py ```
+``` python3 kanji_converter.py ```
 
